@@ -1,0 +1,728 @@
+﻿@model efessanat.Models.AnasayfaIletisimKismi
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<link rel="icon"
+      type="image/png"
+      href="~/Assets/images/efesanatlogo.png">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hoşgeldiniz | EfesSanat</title>
+    <meta name="keywords" content="HTML5,CSS3,Template" />
+    <meta name="description" content="" />
+    <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="~/Assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/superslides.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="~/Assets/plugins/slider.revolution.v4/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="~/Assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/layout-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/color_scheme/orange.css" rel="stylesheet" type="text/css" /><!-- orange: default style -->
+    <!--<link id="css_dark_skin" href="~/Assets/css/layout-dark.css" rel="stylesheet" type="text/css" />--><!-- DARK SKIN -->
+    <!-- styleswitcher - demo only -->
+    <link href="~/Assets/css/color_scheme/orange.css" rel="alternate stylesheet" type="text/css" title="orange" />
+    <link href="~/Assets/css/color_scheme/red.css" rel="alternate stylesheet" type="text/css" title="red" />
+    <link href="~/Assets/css/color_scheme/pink.css" rel="alternate stylesheet" type="text/css" title="pink" />
+    <link href="~/Assets/css/color_scheme/yellow.css" rel="alternate stylesheet" type="text/css" title="yellow" />
+    <link href="~/Assets/css/color_scheme/darkgreen.css" rel="alternate stylesheet" type="text/css" title="darkgreen" />
+    <link href="~/Assets/css/color_scheme/green.css" rel="alternate stylesheet" type="text/css" title="green" />
+    <link href="~/Assets/css/color_scheme/darkblue.css" rel="alternate stylesheet" type="text/css" title="darkblue" />
+    <link href="~/Assets/css/color_scheme/blue.css" rel="alternate stylesheet" type="text/css" title="blue" />
+    <link href="~/Assets/css/color_scheme/brown.css" rel="alternate stylesheet" type="text/css" title="brown" />
+    <link href="~/Assets/css/color_scheme/lightgrey.css" rel="alternate stylesheet" type="text/css" title="lightgrey" />
+    <!-- /styleswitcher - demo only -->
+    <!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+    <link href="~/Assets/plugins/styleswitcher/styleswitcher.css" rel="stylesheet" type="text/css" />
+    <!-- Morenizr -->
+    <script type="text/javascript" src="~/Assets/plugins/modernizr.min.js"></script>
+</head>
+<body>
+    <header id="topHead">
+        <div class="container">
+            @if (ViewData["AnasayfaIletisimKismi"] != null)
+            {
+                var item = ViewData["AnasayfaIletisimKismi"] as efessanat.Models.AnasayfaIletisimKismi;
+
+                            <!-- PHONE/EMAIL -->
+                <span class="quick-contact pull-right">
+                    <i class="fa fa-phone"></i> @Html.Raw(item.Numara)
+                </span>
+                <span class="quick-contact pull-left">
+                    <a class="hidden-xs" href="mailto:@item.Mail">&bull;@item.Mail</a>
+                </span>
+            }
+        </div>
+    </header>
+    <!-- /Top Bar -->
+    <!-- TOP NAV -->
+    <header id="topNav" class="topHead">
+        <!-- remove class="topHead" if no topHead used! -->
+        <div class="container">
+
+            <!-- Mobile Menu Button -->
+            <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Logo text or image -->
+            <a class="logo" href="/EfesSanat/">
+                <img src="~/Assets/images/efesanatlogo2.png" alt="Efes Sanat"/>
+            </a>
+
+            <!-- Top Nav -->
+            <div class="navbar-collapse nav-main-collapse collapse pull-right">
+                <nav class="nav-main mega-menu">
+                    <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+                     
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" href="/Kurumsal">
+                                Kurumsal 
+                            </a>
+                          
+                        </li>
+                        <li class="dropdown mega-menu-item mega-menu-two-columns">
+                            <a class="dropdown-toggle" href="/Egitimler">
+                                Eğitimler 
+                            </a>
+                           
+                        </li>
+                        <li class="dropdown mega-menu-item mega-menu-fullwidth">
+                            <a class="dropdown-toggle" href="/Etkinlikler">
+                                Etkinlikler 
+                            </a>
+                            
+                        </li>
+                      
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/Portfolyo">
+                                Portfolyo 
+                            </a>
+                         
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/Iletisim">
+                                İletişim 
+                            </a>
+                          
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/BizdenHaberler">
+                                Bizden Haberler
+                            </a>
+                          
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /Top Nav -->
+
+        </div>
+    </header>
+
+    <span id="header_shadow"></span>
+    <!-- /TOP NAV -->
+    <!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+
+
+    @*<div id="showSwitcher" class="styleSecondColor"><i class="fa fa-angle-double-right"></i></div>*@
+    <!-- /STYLESWITCHER -->
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+        <!-- REVOLUTION SLIDER -->
+        <div class="fullwidthbanner-container roundedcorners">
+            <div class="fullwidthbanner">
+                <ul>
+
+                    <!-- SLIDE  -->
+
+                    @if (ViewData["slaytlar"] != null)
+                    {
+                        foreach (var item in ViewData["slaytlar"] as IEnumerable<efessanat.Models.Slides>)
+                        {
+                            if (item.Type == "1")
+                            {
+                    <!-- SLIDE  -->
+                                <li data-transition="3dcurtain-vertical" data-slotamount="14" data-masterspeed="300" data-delay="10000">
+
+                                    <!-- COVER IMAGE -->
+                                    <img src='~/Slides/@item.Name/arkaplan/arkaplan.jpg' alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+
+                                    <div id="frame" class="tp-caption lft boxshadow"
+                                         data-x="70"
+                                         data-y="70"
+                                         data-speed="900"
+                                         data-start="500"
+                                         data-easing="easeOutBack">
+                                        <iframe src='@item.Frame' width='640' height='360' style='width:640px; height:360px;'></iframe>
+                                    </div>
+
+                                    <div class="tp-caption sft large_bold_grey"
+                                         data-x="750"
+                                         data-y="70"
+                                         data-speed="300"
+                                         data-start="1200"
+                                         data-easing="easeOutExpo">
+                                        @item.Text1
+                                    </div>
+
+                                    <div class="tp-caption sft modern_big_redbg"
+                                         data-x="750"
+                                         data-y="164"
+                                         data-speed="300"
+                                         data-start="1300"
+                                         data-easing="easeOutExpo">
+                                        @item.Text2
+                                    </div>
+
+                                    <div class="tp-caption lfb thinheadline_dark"
+                                         data-x="750"
+                                         data-y="210"
+                                         data-speed="300"
+                                         data-start="1400"
+                                         data-easing="easeOutExpo">
+                                        @item.Text3
+                                    </div>
+
+                                    <div class="tp-caption lfb thinheadline_dark"
+                                         data-x="750"
+                                         data-y="244"
+                                         data-speed="300"
+                                         data-start="1500"
+                                         data-easing="easeOutExpo">
+                                        @item.Text4
+                                    </div>
+
+                                    <div class="tp-caption lfb thinheadline_dark"
+                                         data-x="750"
+                                         data-y="278"
+                                         data-speed="300"
+                                         data-start="1600"
+                                         data-easing="easeOutExpo">
+                                        @item.Text5
+                                    </div>
+
+                                    <div class="tp-caption lfb medium_bg_darkblue"
+                                         data-x="750"
+                                         data-y="390"
+                                         data-speed="300"
+                                         data-start="1600"
+                                         data-easing="easeOutExpo">
+                                        <i class="fa fa-html5"></i> @item.Text6
+                                    </div>
+
+                                    <div class="tp-caption lfb medium_bg_orange"
+                                         data-x="860"
+                                         data-y="390"
+                                         data-speed="300"
+                                         data-start="1600"
+                                         data-easing="easeOutExpo">
+                                        <i class="fa fa-css3"></i> @item.Text7
+                                    </div>
+
+                                </li>
+                            }
+                            if (item.Type == "2")
+                            {
+                    <!-- SLIDE -->
+                                <li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700">
+
+                                    <!-- COVER IMAGE -->
+                                    <img src='~/Slides/@item.Name/arkaplan/arkaplan.jpg' alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+                                    <div class="tp-caption large_text sft"
+                                         data-x="center"
+                                         data-y="130"
+                                         data-speed="300"
+                                         data-start="1000"
+                                         data-endspeed="500"
+                                         data-easing="easeOutBack">
+                                        <h1>@item.Text1</h1>
+                                    </div>
+
+                                    <div class="tp-caption large_text sft"
+                                         data-x="center"
+                                         data-y="260"
+                                         data-speed="300"
+                                         data-start="1700"
+                                         data-endspeed="500"
+                                         data-easing="easeOutBack">
+                                        <h2>@item.Text2</h2>
+                                    </div>
+
+                                    <div class="tp-caption large_text sft"
+                                         data-x="center"
+                                         data-y="360"
+                                         data-customin="x:-150;y:-280;z:0;rotationX:-140;rotationY:-280;rotationZ:-220;scaleX:1.5;scaleY:0;skewX:57;skewY:60;opacity:0;transformPerspective:600;transformOrigin:120% 190%;"
+                                         data-customout="x:-450;y:-430;z:-30;rotationX:90;rotationY:-290;rotationZ:-20;scaleX:1;scaleY:2.8;skewX:59;skewY:4;opacity:0;transformPerspective:600;transformOrigin:70% 0%;"
+                                         data-speed="1500"
+                                         data-endspeed="500"
+                                         data-start="2700"
+                                         data-endeasing="Bounce.easeOut"
+                                         data-easing="Back.easeInOut">
+                                        <a class="btn btn-primary btn-lg" target="_blank" href="https://wrapbootstrap.com/theme/atropos-responsive-website-template-WB05SR527">@item.ButtonText</a>
+                                    </div>
+
+                                </li>
+                            }
+
+                            if (item.Type == "3")
+                            {
+                                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+
+                                    <!-- COVER IMAGE -->
+                                    <img src='~/Slides/@item.Name/arkaplan/arkaplan.jpg' alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+                                    <!-- LAYER NR. 1 -->
+                                    @*<div class="tp-caption lightgrey_divider skewfromrightshort customout"
+                                             data-x="85"
+                                             data-y="224"
+                                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                             data-speed="5000"
+                                             data-start="1200"
+                                             data-easing="Power4.easeOut"
+                                             data-endspeed="500"
+                                             data-endeasing="Power4.easeIn"
+                                             data-captionhidden="off"
+                                             style="z-index: 2">
+                                        </div>*@
+
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption customin customout"
+                                         data-x="right" data-hoffset="-220"
+                                         data-y="bottom" data-voffset="0"
+                                         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="800"
+                                         data-start="700"
+                                         data-easing="Power4.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         style="z-index: 3">
+                                        <img src='~/Slides/@item.Name/foto_1/foto_1.jpg' alt="">
+                                    </div>
+
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption customin customout"
+                                         data-x="right" data-hoffset="-100"
+                                         data-y="bottom" data-voffset="0"
+                                         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="1500"
+                                         data-start="700"
+                                         data-easing="Elastic.easeInOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power1.easeIn"
+                                         style="z-index: 3">
+                                        <img src='~/Slides/@item.Name/foto_2/foto_2.jpg' alt="">
+                                    </div>
+
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption large_bold_grey skewfromrightshort customout"
+                                         data-x="80"
+                                         data-y="66"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="800"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 4">
+                                        Powerful
+                                    </div>
+
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption large_bold_grey skewfromleftshort customout"
+                                         data-x="80"
+                                         data-y="122"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="300"
+                                         data-start="1100"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 7">
+                                        @item.Text1
+                                    </div>
+
+                                    <!-- LAYER NR. 5 -->
+                                    <div class="tp-caption small_thin_grey customin customout"
+                                         data-x="80"
+                                         data-y="230"
+                                         data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="1300"
+                                         data-easing="Power4.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 8">
+                                        @item.Text3
+                                        <a href="index-more.html">Read more...</a>
+                                    </div>
+
+                                    <!-- LAYER NR. 6 -->
+                                    <div class="tp-caption large_bold_darkblue skewfromleftshort customout"
+                                         data-x="80" data-hoffset="-90"
+                                         data-y="350"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="1600"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 10">
+                                        @item.Text4
+                                    </div>
+
+                                    <!-- LAYER NR. 7 -->
+                                    <div class="tp-caption medium_bg_darkblue skewfromleftshort customout"
+                                         data-x="80" data-hoffset="-90"
+                                         data-y="410"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="1650"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 11">
+                                        @item.Text5
+                                    </div>
+
+                                    <div class="tp-caption medium_bold_orange skewfromleftshort customout start font300"
+                                         data-x="230" data-hoffset="-90"
+                                         data-y="370"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="1850"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 13;">
+                                        <strong>@item.Text6</strong>
+                                    </div>
+
+                                    <!-- LAYER NR. 8 -->
+                                    <div class="tp-caption medium_bg_orange skewfromleftshort customout"
+                                         data-x="230" data-hoffset="-90"
+                                         data-y="410"
+                                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                         data-speed="500"
+                                         data-start="2300"
+                                         data-easing="Back.easeOut"
+                                         data-endspeed="500"
+                                         data-endeasing="Power4.easeIn"
+                                         data-captionhidden="off"
+                                         style="z-index: 21">
+                                        @item.Text7
+                                    </div>
+
+                                </li>
+                            }
+                        }
+                    }
+
+
+
+
+                </ul>
+                <div class="tp-bannertimer"></div>
+            </div>
+        </div>
+        <!-- /REVOLUTION SLIDER -->
+
+
+        <section class="container text-center">
+            @if (ViewData["AnasayfaHosgeldiniz"] != null)
+            {
+                var item = ViewData["AnasayfaHosgeldiniz"] as efessanat.Models.AnasayfaHosgeldiniz;
+                @Html.Raw(item.Yazi)
+
+            }
+        </section>
+
+
+        <div class="container">
+            <hr class="half-margins" /><!-- hr line -->
+        </div>
+
+
+        <!-- FEATURED BOXES 3 -->
+        <section class="container">
+            <div class="row">
+                @if (ViewData["references"] != null)
+                {
+                    foreach (var item in ViewData["nitelikler"] as IEnumerable<efessanat.Models.AnasayfaNiteliklers>)
+                    {
+                        <div class="col-md-3">
+                            <div class="featured-box nobg border-only">
+                                <div class="box-content">
+                                    <i class="fa fa-shield"></i>
+                                    <h4>@item.NitelikBaslik</h4>
+                                    <p>@item.NitelikYazisi</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </section>
+        <!-- /FEATURED BOXES 3 -->
+
+
+        <div class="container">
+            <hr class="no-lines" /><!-- hr line -->
+        </div>
+
+
+        <!-- CAROUSEL -->
+        <section class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    @if (ViewData["refYazisi"] != null)
+                    {
+                        var item = ViewData["refYazisi"] as efessanat.Models.ReferansYazisis;
+                        <div>@Html.Raw(item.Yazi)</div>
+
+                    }
+
+                    <!-- divider -->
+                    <div class="divider styleColor">
+                        <i class="fa fa-leaf"></i>
+                    </div>
+
+                    <!-- carousel -->
+                    <div class="owl-carousel" data-plugin-options='{"items": 3, "singleItem": false, "pagination": false, "autoPlay": true}'>
+                        @if (ViewData["references"] != null)
+                        {
+                            foreach (var item in ViewData["references"] as IEnumerable<efessanat.Models.References>)
+                            {
+                                <div>
+                                    <img class="img-responsive" src="~/References/@item.Name/logo.jpg" alt="">
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
+                        @if (ViewData["yoneticiler"] != null)
+                        {
+                            foreach (var item in ViewData["yoneticiler"] as IEnumerable<efessanat.Models.Yoneticiler>)
+                            {
+                                <div>
+                                    <img class="img-responsive" src="~/Yoneticiler/@item.Name/yonetici.jpg" alt="">
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /CAROUSEL -->
+        <!-- CALLOUT -->
+        @*<div class="bs-callout margin-top text-center styleBackground noradius">
+            <h3>
+                Welcome to <strong>Atropos</strong> Multipurpose <strong>template</strong>.
+                <a href="https://wrapbootstrap.com/theme/atropos-responsive-website-template-WB05SR527" target="_blank" class="btn btn-primary btn-lg">Buy Now!</a>
+            </h3>
+        </div>*@
+        <!-- /CALLOUT -->
+        <!-- PARALLAX -->
+
+        @foreach (var items in ViewData["AltFoto"] as IEnumerable<efessanat.Models.AltFoto>)
+        {
+            <section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7" style="background-image: url('../../AltFoto/@items.Name/logo.jpg');">
+
+                <span class="overlay"></span>
+
+                <div class="container">
+
+                    <div class="row">
+                        <!-- left content -->
+                        <div class="col-md-7 animation_fade_in">
+                            @if (ViewData["altFotoTanitimYazisi"] != null)
+                            {
+                                var item = ViewData["altFotoTanitimYazisi"] as efessanat.Models.AltFotoTanitimYazisis;
+                                <div>@Html.Raw(item.Yazi)</div>
+
+                            }
+
+
+                        </div>
+
+                        <!-- right image -->
+                        <div class="col-md-5 animation_fade_in">
+@foreach (var altfotologo in ViewData["AltFotoLogo"] as IEnumerable<efessanat.Models.AltFotoLogo>)
+{
+                            <img class="visible-md visible-lg img-responsive pull-right" src="~/AltFotoLogo/@altfotologo.Name/logo.jpg" alt="" />
+}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+                                                                       
+                                                                           <!-- PARALLAX -->
+
+</div>
+    <!-- /WRAPPER -->
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- copyright , scrollTo Top -->
+        <div class="footer-bar">
+            <div class="container">
+                <span class="copyright">Copyright &copy; Efes Sanat. Tüm hakları saklıdır.</span>
+                <a class="toTop" href="#topNav">BAŞA DÖN <i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+        </div>
+        <!-- copyright , scrollTo Top -->
+        <!-- footer content -->
+        <div class="footer-content">
+            <div class="container">
+
+                <div class="row">
+
+
+                    <!-- FOOTER CONTACT INFO -->
+                    <div class="column col-md-4">
+                        @if (ViewData["AnasayfaIletisimKismi"] != null)
+                        {
+                            var item = ViewData["AnasayfaIletisimKismi"] as efessanat.Models.AnasayfaIletisimKismi;
+                            <h3>@Html.Raw(item.Baslik)</h3>
+                            <p class="contact-desc">
+                                @Html.Raw(item.Yazi)
+                            </p>
+                            <address class="font-opensans">
+                                <ul>
+                                    <li class="footer-sprite address">
+                                        @Html.Raw(item.Adres)
+                                    </li>
+                                    <li class="footer-sprite phone">
+                                        Phone: @Html.Raw(item.Numara)
+                                    </li>
+                                    <li class="footer-sprite email">
+                                        <a href="mailto:@item.Mail">@Html.Raw(item.Mail)</a>
+                                    </li>
+                                </ul>
+                            </address>
+                        }
+                        
+
+
+
+
+                    </div>
+                    <!-- /FOOTER CONTACT INFO -->
+                    <!-- FOOTER LOGO -->
+                    <div class="column logo col-md-4 text-center">
+                        <div class="logo-content">
+                            <img class="animate_fade_in" src="~/Assets/images/efesanatlogo.png" width="200" alt="" />
+                            <h4>Efes Sanat</h4>
+                        </div>
+                    </div>
+                    <!-- /FOOTER LOGO -->
+                    <!-- FOOTER LATEST POSTS -->
+                    <div class="column col-md-4 text-right">
+                        <h3>RECENT POSTS</h3>
+
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+
+                        <a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>
+
+                    </div>
+                    <!-- /FOOTER LATEST POSTS -->
+
+                </div>
+
+            </div>
+        </div>
+        <!-- footer content -->
+
+    </footer>
+    <!-- /FOOTER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript" src="~/Assets/plugins/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.appear.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.isotope.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/masonry.js"></script>
+
+    <script type="text/javascript" src="~/Assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/stellar/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/knob/js/jquery.knob.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/superslides/dist/jquery.superslides.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/styleswitcher/styleswitcher.js"></script><!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+    <script type="text/javascript" src="~/Assets/plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
+
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="~/Assets/plugins/slider.revolution.v4/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/slider.revolution.v4/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/slider_revolution.js"></script>
+
+
+    <script type="text/javascript" src="~/Assets/js/scripts.js"></script>
+    @*<script>
+    function getId(url) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return 'error';
+        }
+    }
+    var myId = getId('https://www.youtube.com/watch?v=1-tkdg9DZHI');
+    debugger;
+    var embedCode = '//www.youtube.com/embed/' + myId;
+    $("#frame iframe").attr('src', embedCode);
+    </script>*@
+</body>
+</html>

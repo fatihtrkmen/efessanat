@@ -1,0 +1,24 @@
+﻿        public ActionResult KurumsalCalisanBilgileriEkle()
+        {
+            return View();
+        }
+        public ActionResult KurumsalCalisanBilgileriEkle_()
+        {
+            return View();
+        }
+
+		Foto Sil
+
+		            string path = Path.Combine(Server.MapPath("~/AltFotoLogo/" + _id + "/"));
+
+            if (Directory.Exists(path))
+            {
+                Directory.Delete(path, true);
+            }
+            else
+            {
+                ModelState.AddModelError("", "Yoneticiler bulunamadi.");
+            }
+            return Redirect("/panel/AltFotoLogo");
+
+		Foto Sil

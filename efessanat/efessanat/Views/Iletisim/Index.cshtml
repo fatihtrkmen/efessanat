@@ -1,0 +1,471 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<link rel="icon"
+      type="image/png"
+      href="~/Assets/images/efesanatlogo.png">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hoşgeldiniz | EfesSanat</title>
+    <meta name="keywords" content="HTML5,CSS3,Template" />
+    <meta name="description" content="" />
+    <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="~/Assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/superslides.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="~/Assets/css/portfolio.css" rel="stylesheet" />
+
+    <!-- THEME CSS -->
+    <link href="~/Assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/layout-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/css/color_scheme/orange.css" rel="stylesheet" type="text/css" /><!-- orange: default style -->
+    <!--<link id="css_dark_skin" href="~/Assets/css/layout-dark.css" rel="stylesheet" type="text/css" />--><!-- DARK SKIN -->
+    <!-- styleswitcher - demo only -->
+    <link href="~/Assets/css/color_scheme/orange.css" rel="alternate stylesheet" type="text/css" title="orange" />
+    <link href="~/Assets/css/color_scheme/red.css" rel="alternate stylesheet" type="text/css" title="red" />
+    <link href="~/Assets/css/color_scheme/pink.css" rel="alternate stylesheet" type="text/css" title="pink" />
+    <link href="~/Assets/css/color_scheme/yellow.css" rel="alternate stylesheet" type="text/css" title="yellow" />
+    <link href="~/Assets/css/color_scheme/darkgreen.css" rel="alternate stylesheet" type="text/css" title="darkgreen" />
+    <link href="~/Assets/css/color_scheme/green.css" rel="alternate stylesheet" type="text/css" title="green" />
+    <link href="~/Assets/css/color_scheme/darkblue.css" rel="alternate stylesheet" type="text/css" title="darkblue" />
+    <link href="~/Assets/css/color_scheme/blue.css" rel="alternate stylesheet" type="text/css" title="blue" />
+    <link href="~/Assets/css/color_scheme/brown.css" rel="alternate stylesheet" type="text/css" title="brown" />
+    <link href="~/Assets/css/color_scheme/lightgrey.css" rel="alternate stylesheet" type="text/css" title="lightgrey" />
+    <!-- /styleswitcher - demo only -->
+    <!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+    <link href="~/Assets/plugins/styleswitcher/styleswitcher.css" rel="stylesheet" type="text/css" />
+    <!-- Morenizr -->
+    <script type="text/javascript" src="~/Assets/plugins/modernizr.min.js"></script>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <header id="topHead">
+        <div class="container">
+            @if (ViewData["AnasayfaIletisimKismi"] != null)
+            {
+                var item = ViewData["AnasayfaIletisimKismi"] as efessanat.Models.AnasayfaIletisimKismi;
+
+                            <!-- PHONE/EMAIL -->
+                <span class="quick-contact pull-right">
+                    <i class="fa fa-phone"></i> @Html.Raw(item.Numara)
+                </span>
+                <span class="quick-contact pull-left">
+                    <a class="hidden-xs" href="mailto:@item.Mail">&bull;@item.Mail</a>
+                </span>
+            }
+        </div>
+    </header>
+    <!-- /Top Bar -->
+    <!-- TOP NAV -->
+    <header id="topNav" class="topHead">
+        <!-- remove class="topHead" if no topHead used! -->
+        <div class="container">
+
+            <!-- Mobile Menu Button -->
+            <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Logo text or image -->
+            <a class="logo" href="/EfesSanat">
+                <img src="~/Assets/images/efesanatlogo2.png" alt="Efes Sanat" />
+            </a>
+
+            <!-- Top Nav -->
+            <div class="navbar-collapse nav-main-collapse collapse pull-right">
+                <nav class="nav-main mega-menu">
+                    <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" href="/Kurumsal">
+                                Kurumsal
+                            </a>
+
+                        </li>
+                        <li class="dropdown mega-menu-item mega-menu-two-columns">
+                            <a class="dropdown-toggle" href="/Egitimler">
+                                Eğitimler
+                            </a>
+
+                        </li>
+                        <li class="dropdown mega-menu-item mega-menu-fullwidth">
+                            <a class="dropdown-toggle" href="/Etkinlikler">
+                                Etkinlikler
+                            </a>
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/Portfolyo">
+                                Portfolyo
+                            </a>
+
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/Iletisim">
+                                İletişim
+                            </a>
+
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="/BizdenHaberler">
+                                Bizden Haberler
+                            </a>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /Top Nav -->
+
+        </div>
+    </header>
+
+    <span id="header_shadow"></span>
+    <!-- /TOP NAV -->
+    <!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+    @*<div id="switcher">
+        <div class="content-switcher">
+            <h4>STYLE OPTIONS</h4>
+
+            <p>10 Predefined Color Schemes</p>
+            <ul>
+                <li><a href="#" onclick="setActiveStyleSheet('orange'); return false;" title="orange" class="color"><img src="assets/images/demo/color_schemes/1.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('red'); return false;" title="red" class="color"><img src="assets/images/demo/color_schemes/2.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('pink'); return false;" title="pink" class="color"><img src="assets/images/demo/color_schemes/3.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('yellow'); return false;" title="yellow" class="color"><img src="assets/images/demo/color_schemes/4.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('darkgreen'); return false;" title="darkgreen" class="color"><img src="assets/images/demo/color_schemes/5.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('green'); return false;" title="green" class="color"><img src="assets/images/demo/color_schemes/6.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('darkblue'); return false;" title="darkblue" class="color"><img src="assets/images/demo/color_schemes/7.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('blue'); return false;" title="blue" class="color"><img src="assets/images/demo/color_schemes/8.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('brown'); return false;" title="brown" class="color"><img src="assets/images/demo/color_schemes/9.png" alt="" width="30" height="30" /></a></li>
+                <li><a href="#" onclick="setActiveStyleSheet('lightgrey'); return false;" title="lightgrey" class="color"><img src="assets/images/demo/color_schemes/10.png" alt="" width="30" height="30" /></a></li>
+            </ul>
+
+            <p>CHOOSE YOUR COLOR SKIN</p>
+            <label><input class="dark_switch" type="radio" name="color_skin" id="is_light" value="light" checked="checked" /> Light</label>
+            <label><input class="dark_switch" type="radio" name="color_skin" id="is_dark" value="dark" /> Dark</label>
+
+            <hr />
+
+            <p>CHOOSE YOUR LAYOUT STYLE</p>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_wide" value="wide" checked="checked" /> Wide</label>
+            <label><input class="boxed_switch" type="radio" name="layout_style" id="is_boxed" value="boxed" /> Boxed</label>
+
+
+            <p>Patterns for Boxed Version</p>
+            <div>
+                <button onclick="pattern_switch('none');" class="pointer switcher_thumb"><img src="assets/images/patterns/none.jpg" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern2');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern2.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern3');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern3.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern4');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern4.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern5');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern5.png" width="27" height="27" alt="" /></button>
+            </div>
+
+            <div>
+                <button onclick="pattern_switch('pattern6');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern6.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern7');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern7.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern8');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern8.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern9');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern9.png" width="27" height="27" alt="" /></button>
+                <button onclick="pattern_switch('pattern10');" class="pointer switcher_thumb"><img src="assets/images/patterns/pattern10.png" width="27" height="27" alt="" /></button>
+            </div>
+
+            <p>Images for Boxed Version</p>
+            <button onclick="background_switch('none');" class="pointer switcher_thumb"><img src="assets/images/boxed_background/none.jpg" width="27" height="27" alt="" /></button>
+            <button onclick="background_switch('assets/images/boxed_background/1.jpg');" class="pointer switcher_thumb"><img src="assets/images/boxed_background/1_thumb.jpg" width="27" height="27" alt="" /></button>
+            <button onclick="background_switch('assets/images/boxed_background/2.jpg');" class="pointer switcher_thumb"><img src="assets/images/boxed_background/2_thumb.jpg" width="27" height="27" alt="" /></button>
+            <button onclick="background_switch('assets/images/boxed_background/3.jpg');" class="pointer switcher_thumb"><img src="assets/images/boxed_background/3_thumb.jpg" width="27" height="27" alt="" /></button>
+            <button onclick="background_switch('assets/images/boxed_background/4.jpg');" class="pointer switcher_thumb"><img src="assets/images/boxed_background/4_thumb.jpg" width="27" height="27" alt="" /></button>
+
+            <hr />
+
+            <div class="text-center">
+                <button onclick="resetSwitcher();" class="btn btn-primary btn-xs">Reset Styles</button>
+            </div>
+
+            <div id="hideSwitcher">&times;</div>
+        </div>
+    </div>*@
+
+    @*<div id="showSwitcher" class="styleSecondColor"><i class="fa fa-angle-double-right"></i></div>*@
+    <!-- /STYLESWITCHER -->
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+        <!-- PAGE TITLE -->
+        <header id="page-title">
+            <!-- style="background-image:url('assets/images/demo/parallax_bg.jpg')" -->
+            <!--
+                Enable only if bright background image used
+                <span class="overlay"></span>
+            -->
+
+            <div class="container">
+                <h1>İletişim</h1>
+
+                <ul class="breadcrumb">
+                    <li><a href="/EfesSanat">Anasayfa</a></li>
+                    <li class="/Iletisim">İletişim</li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="contact" class="container">
+
+
+            <div class="row">
+
+                <!-- FORM -->
+                <div class="col-md-8">
+
+                    <h2>Drop us a line or just say <strong><em>Hello!</em></strong></h2>
+
+                    <!--
+                        if you want to use your own contact script, remove .hide class
+                    -->
+                    <!-- SENT OK -->
+                    <div id="_sent_ok_" class="alert alert-success fade in fsize16 hide">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Thank You!</strong> Your message successfully sent!
+                    </div>
+                    <!-- /SENT OK -->
+                    <!-- SENT FAILED -->
+                    <div id="_sent_required_" class="alert alert-danger fade in fsize16 hide">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Failed!</strong> Please complete all mandatory (*) fields!
+                    </div>
+                    <!-- /SENT FAILED -->
+
+                    <form id="contactForm" class="white-row" action="php/contact.php" method="post">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label>Full Name *</label>
+                                    <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="contact_name" id="contact_name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>E-mail Address *</label>
+                                    <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="contact_email" id="contact_email">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Phone</label>
+                                    <input type="text" value="" data-msg-required="Please enter your phone" data-msg-email="Please enter your phone" maxlength="100" class="form-control" name="contact_phone" id="contact_phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label>Subject</label>
+                                    <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="contact_subject" id="contact_subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label>Message *</label>
+                                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="contact_message" id="contact_message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="pull-right">
+                                    <!-- captcha -->
+                                    <label class="block text-right fsize12">Antispam Code</label>
+                                    <img alt="" rel="nofollow,noindex" width="50" height="18" src="php/captcha.php?bgcolor=ffffff&amp;txtcolor=000000">
+                                    <input type="text" name="contact_captcha" id="contact_captcha" value="" data-msg-required="Please enter the subject." maxlength="6" style="width:100px; margin-left:10px;">
+                                </span>
+
+                                <input id="contact_submit" type="submit" value="Send Message" class="btn btn-primary btn-lg" data-loading-text="Loading...">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- /FORM -->
+                <!-- INFO -->
+                <div class="col-md-4">
+
+                    <h2>Visit Us</h2>
+
+                    <div class="white-row">
+                        <div id="gmap"><!-- google map --></div>
+                        <script type="text/javascript">
+								var	$googlemap_latitude 	= -37.812344,
+									$googlemap_longitude	= 144.968900,
+									$googlemap_zoom			= 13;
+                        </script>
+
+                        <div class="divider white half-margins">
+                            <!-- divider -->
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                        <p class="nomargin-bottom">
+                            <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
+                            <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> 1800-555-1234</span>
+                            <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+                        </p>
+
+                    </div>
+
+
+                </div>
+                <!-- /INFO -->
+
+            </div>
+
+        </section>
+
+    </div>
+    <!-- /WRAPPER -->
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- copyright , scrollTo Top -->
+        <div class="footer-bar">
+            <div class="container">
+                <span class="copyright">Copyright &copy; Efes Sanat. Tüm hakları saklıdır.</span>
+                <a class="toTop" href="#topNav">BAŞA DÖN <i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+        </div>
+        <!-- copyright , scrollTo Top -->
+        <!-- footer content -->
+        <div class="footer-content">
+            <div class="container">
+
+                <div class="row">
+
+
+                    <!-- FOOTER CONTACT INFO -->
+                    <div class="column col-md-4">
+                        @if (ViewData["AnasayfaIletisimKismi"] != null)
+                        {
+                            var item = ViewData["AnasayfaIletisimKismi"] as efessanat.Models.AnasayfaIletisimKismi;
+                            <h3>@Html.Raw(item.Baslik)</h3>
+                            <p class="contact-desc">
+                                @Html.Raw(item.Yazi)
+                            </p>
+                            <address class="font-opensans">
+                                <ul>
+                                    <li class="footer-sprite address">
+                                        @Html.Raw(item.Adres)
+                                    </li>
+                                    <li class="footer-sprite phone">
+                                        Phone: @Html.Raw(item.Numara)
+                                    </li>
+                                    <li class="footer-sprite email">
+                                        <a href="mailto:@item.Mail">@Html.Raw(item.Mail)</a>
+                                    </li>
+                                </ul>
+                            </address>
+                        }
+
+
+
+
+
+                    </div>
+                    <!-- /FOOTER CONTACT INFO -->
+                    <!-- FOOTER LOGO -->
+                    <div class="column logo col-md-4 text-center">
+                        <div class="logo-content">
+                            <img class="animate_fade_in" src="~/Assets/images/logo_footer.png" width="200" alt="" />
+                            <h4>ATROPOS TEMPLATE</h4>
+                        </div>
+                    </div>
+                    <!-- /FOOTER LOGO -->
+                    <!-- FOOTER LATEST POSTS -->
+                    <div class="column col-md-4 text-right">
+                        <h3>RECENT POSTS</h3>
+
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+                        <div class="post-item">
+                            <small>JANUARY 2, 2014 BY ADMIN</small>
+                            <h3><a href="blog-single-sidebar-left.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+                        </div>
+
+                        <a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i class="fa fa-arrow-right"></i></a>
+
+                    </div>
+                    <!-- /FOOTER LATEST POSTS -->
+
+                </div>
+
+            </div>
+        </div>
+        <!-- footer content -->
+
+    </footer>
+    <!-- /FOOTER -->
+
+
+    <!-- /FOOTER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript" src="~/Assets/plugins/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.appear.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.isotope.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/masonry.js"></script>
+
+    <script type="text/javascript" src="~/Assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/stellar/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/knob/js/jquery.knob.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/superslides/dist/jquery.superslides.min.js"></script>
+    <script type="text/javascript" src="~/Assets/plugins/styleswitcher/styleswitcher.js"></script><!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
+
+
+    <script type="text/javascript" src="~/Assets/js/scripts.js"></script>
+    <script src="~/Assets/js/contact_ajax.js"></script>
+
+    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+    <!--<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXX-X', 'domainname.com');
+        ga('send', 'pageview');
+    </script>
+    -->
+
+</body>
+</html>
